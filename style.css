@@ -1,0 +1,186 @@
+/* Gradient Background */
+body {
+    background: linear-gradient(to right, #8e9eab, #eef2f3);
+    min-height: 100vh;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Main container styles */
+.col-lg-6,
+.col-lg-4 {
+    margin-top: 50px;
+    padding: 30px;
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.col-lg-4 {
+    height: 10rem;
+}
+
+/* Gap for large screens */
+.task-input-container {
+    gap: 40px;
+}
+
+h1 {
+    font-size: 36px;
+    font-weight: bold;
+    color: #34495e;
+}
+
+h3 {
+    font-size: 28px;
+    color: #2c3e50;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Task List Styles */
+ul#todo-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+ul#todo-list li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f9f9f9;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 10px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+ul#todo-list li.completed span {
+    text-decoration: line-through;
+    color: #7f8c8d;
+}
+
+/* Input and Add Button */
+.input-section {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.input-section input {
+    flex: 1;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #ced4da;
+    margin-right: 10px;
+}
+
+.input-section button {
+    background: linear-gradient(135deg, #6dd5ed 0%, #2193b0 100%);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+/* Filter Buttons */
+.filter-btns {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.filter {
+    padding: 8px 16px;
+    border: 2px solid transparent;
+    border-radius: 20px;
+    background-color: #95a5a6;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.filter.active-filter {
+    background-color: #3498db;
+    border-color: #2980b9;
+}
+
+.filter:hover {
+    background-color: #7f8c8d;
+}
+
+/* Delete All Button */
+#delete-all-btn {
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#delete-all-btn:hover {
+    background-color: #c0392b;
+}
+
+/* Actions Button */
+.actions button {
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+.actions button:nth-child(1) {
+    background-color: #2ecc71;
+    color: white;
+}
+
+.actions button:nth-child(1):hover {
+    background-color: #27ae60;
+}
+
+.actions button:nth-child(2) {
+    background-color: #e74c3c;
+    color: white;
+}
+
+.actions button:nth-child(2):hover {
+    background-color: #c0392b;
+}
+
+/* Responsiveness adjustments */
+@media (max-width: 992px) {
+    .task-input-container {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .input-section button {
+        margin-top: 10px;
+    }
+}
+
+@media (max-width: 576px) {
+    .input-section {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .input-section input {
+        margin-bottom: 10px;
+    }
+
+    .filter-btns {
+        flex-direction: column;
+    }
+
+    .filter {
+        margin-bottom: 10px;
+        width: 100%;
+    }
+}
